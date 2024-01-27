@@ -7,9 +7,18 @@ int main() {
     int a, b, sum;
     sum = 0;
     cin >> a >> b;
-    for (a; a<=b; a++){
-        if (a % 5 == 0){
-            sum += a;
+    if (a <= b){
+        for (a; a<=b; a++){
+            if (a % 5 == 0){
+                sum += a;
+            }
+        }
+    }
+    else{
+        for (b; b<=a; b++){
+            if (b % 5 == 0){
+                sum += b;
+            }
         }
     }
     cout << sum;
