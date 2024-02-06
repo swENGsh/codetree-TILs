@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // 여기에 코드를 작성해주세요.
+    int n, cur;
+    cin >> n;
+    cur = 65;
+    for (int i=0; i<n; i++){
+        for (int j=0; j<i; j++){
+            cout << "  ";
+        }
+        for (int j=i; j<n; j++){
+            cout << (char) cur << ' ';
+            if ((char) cur == 'Z') cur = 65;
+            else cur ++;
+        }
+        cout << endl;
+    }
+    return 0;
+}
