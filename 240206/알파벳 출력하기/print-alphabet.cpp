@@ -8,7 +8,8 @@ int main() {
     for (int i=0; i<n; i++){
         for (int j=n-i; j<=n; j++){
             cout << (char) cur;
-            cur ++;
+            if ((char) cur == 'Z') cur = 65;
+            else cur ++;
         }
         cout << endl;
     }
