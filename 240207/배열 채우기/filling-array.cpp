@@ -11,7 +11,7 @@ int main() {
         }
         cnt++;
     }
-    for (int i=cnt; i>=0; i--){
+    for (int i=cnt-1; i>=0; i--){
         cout << arr[i] << " ";
     }
     return 0;
