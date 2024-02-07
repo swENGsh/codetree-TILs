@@ -7,9 +7,9 @@ int main() {
     for (int i=0; i<10; i++){
         cin >> arr[i];
         if (arr[i] == 0) {
-            cnt = i-1;
             break;
         }
+        cnt++;
     }
     for (int i=cnt; i>=0; i--){
         cout << arr[i] << " ";
