@@ -22,7 +22,10 @@ int main() {
     for (int i=0; i<n; i++){
         if (!dup[i] && max_val < arr[i]) max_val = arr[i]; 
     }
-    cout << max_val;
+    
+    if (max_val == 0) cout << -1;
+    else cout << max_val;
+
 
     return 0;
 }
