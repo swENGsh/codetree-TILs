@@ -3,32 +3,22 @@
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n, max_val, min_val, idx, tmp, ans;
+    int n,  ans;
     cin >> n;
-    max_val = idx = tmp = ans = 0;
-    min_val = INT_MAX;
+    ans = 0;
     int* arr = new int[n];
     for (int i=0; i<n; i++) cin >> arr[i];
-    min_val = arr[0];
-    for (int i=1; i<n; i++){
-        if (min_val > arr[i]){
-            min_val = arr[i];
-            idx = i;
-            for (int j=i; j<n; j++){
-                if (max_val < arr[j]){
-                    max_val = arr[j];
-                    tmp = max_val - min_val;
-                }
-            }
-            if (tmp > ans) {
-                ans = tmp;
-                tmp = 0;
+    for (int i=0; i<n-1; i++){
+        for (int j=i+1; j<n; j++){
+            int a = arr[j] - arr[i];
+            if (a > ans){
+                ans = a;
             }
         }
     }
 
     if (ans > 0){
-       cout << max_val - min_val;
+       cout << ans;
     }
     else {
         cout << 0;
