@@ -6,8 +6,11 @@ def solve(n):
 
 a, b = map(int, input().split())
 sumv = 0
-for i in range(a, b+1):
-    if solve(i):
-        sumv += i
+if a == b:
+    print(sumv)
+else:
+    for i in range(a, b+1):
+        if solve(i):
+            sumv += i
 
-print(sumv)
+    print(sumv)
