@@ -1,12 +1,12 @@
 def solve(m):
     nm = m
-    sumv = m
+    sumv = arr[m-1]
     while nm != 1:
         if nm % 2:
             nm -= 1
         else :
             nm //= 2
-        sumv += arr[nm]
+        sumv += arr[nm-1]
     return sumv
     sumv = 0
 
