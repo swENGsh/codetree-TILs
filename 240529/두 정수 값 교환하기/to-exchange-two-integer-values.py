@@ -1,6 +1,5 @@
 def change(a, b):
-    global n, m
-    n, m = b, a
+    return b, a
 n, m = map(int, input().split())
-change(n, m)
+n, m = change(n, m)
 print(n, m)
