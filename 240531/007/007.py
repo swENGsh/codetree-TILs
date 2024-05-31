@@ -4,7 +4,8 @@ class Code:
         self.point = point
         self.time = time
 
-code = Code("codetree", "L", 13)
+code, point, time = input().split()
+code = Code(code, point, int(time))
 print(f'secret code : {code.code}')
 print(f'meeting point : {code.point}')
 print(f'time : {code.time}')
