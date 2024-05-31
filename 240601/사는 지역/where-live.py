@@ -10,7 +10,7 @@ for i in range(n):
     name, addr, city = input().split()
     infos.append(Info(name, addr, city))
 
-sorted(infos, key=lambda info: info.name)
+infos.sort(key=lambda x: x.name)
 print(f'name {infos[-1].name}')
 print(f'addr {infos[-1].addr}')
 print(f'city {infos[-1].city}')
