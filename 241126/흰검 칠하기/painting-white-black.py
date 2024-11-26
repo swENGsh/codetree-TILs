@@ -1,7 +1,7 @@
 n = int(input())
-arr = ['']*20
-carr = [[0,0] for _ in range(20)]
-now = 10
+arr = ['']*20001
+carr = [[0,0] for _ in range(20001)]
+now = 10000
 for _ in range(n):
     x, d = input().split()
     if d == 'L':
