@@ -11,11 +11,4 @@ for _ in range(n):
         for i in range(now, now+int(x)):
             arr[i] = 'B'
         now += int(x) - 1
-cnt_w = cnt_b = 0
-for c in arr:
-    if c == 'W':
-        cnt_w += 1
-    elif c == 'B':
-        cnt_b += 1
-#print(arr.count('W'), arr.count('B'))
-print(cnt_w, cnt_b)
+print(arr.count('W'), arr.count('B'))
