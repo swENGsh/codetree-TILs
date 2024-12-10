@@ -28,8 +28,13 @@ for i in range(by1+1000, by2+1000+1):
 
 ansx1 = ansy1 = 2000
 ansx2 = ansy2 = -2000
-find_x()
-find_y()
+
+if ax1 >= bx1 and ay1 >= by1 and ax2 <= bx2 and ay2 <= by2:
+    ansx1 = ansy1 = ansx2 = ansy2 = 0
+else:
+    find_x()
+    find_y()
+
 
 ans = (ansx2 - ansx1) * (ansy2 - ansy1)
 
