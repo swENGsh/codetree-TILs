@@ -1,19 +1,18 @@
-def find_s():
-    global ansx1, ansy1
+def find_x():
+    global ansx1, ansx2
     for i in range(ay1 + 1000, ay2 + 1000+1):
         for j in range(ax1 + 1000, ax2 + 1000+1):
             if area[i][j] == 1:
-                ansx1 = j
-                ansy1 = i
-                return
-def find_e():
-    global ansx2, ansy2
-    for j in range(ax2 + 1000, ax1 + 1000 + 1, -1):
-        for i in range(ay2 + 1000, ay1 + 1000 - 1, -1):
+                ansx1 = min(j, ansx1)
+                ansx2 = max(j, ansx2)
+def find_y():
+    global ansy1, ansy2
+    for i in range(ay1 + 1000, ay2 + 1000+1):
+        for j in range(ax1 + 1000, ax2 + 1000+1):
             if area[i][j] == 1:
-                ansx2 = j
-                ansy2 = i
-                return
+                ansy1 = min(i, ansy1)
+                ansy2 = max(i, ansy2)
+
 ax1, ay1, ax2, ay2 = map(int, input().split())
 bx1, by1, bx2, by2 = map(int, input().split())
 
@@ -27,9 +26,10 @@ for i in range(by1+1000, by2+1000+1):
         if area[i][j] == 1:
             area[i][j] = 0
 
-ansx1 = ansx2 = ansy1 = ansy2 = 2000
-find_s()
-find_e()
+ansx1 = ansy1 = 2000
+ansx2 = ansy2 = -2000
+find_x()
+find_y()
 
 ans = (ansx2 - ansx1) * (ansy2 - ansy1)
 
